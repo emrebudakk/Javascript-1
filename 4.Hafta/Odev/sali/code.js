@@ -1,6 +1,6 @@
 // rastgele deger(Math.random() 1 ile 10 arasinda rastgele deger)
 let y = Math.floor(Math.random() * 10 + 1);
-document.getElementById("guessField").innerHTML = y;
+document.getElementById("guessArea").innerHTML = y;
 //Hak sayisi
 let hak = 4;
 
@@ -9,7 +9,7 @@ let guess = 1;
 
 document.getElementById("submitguess").onclick = function () {
   // kullanıcı tarafından girilen sayi
-  let x = document.getElementById("guessField").value;
+  let x = document.getElementById("guessArea").value;
 
   //hak sayaci
   if (y != x.value && guess > hak) {
@@ -22,7 +22,8 @@ document.getElementById("submitguess").onclick = function () {
     window.alert(
       "Tebrikler!!! Dogru tahmin ettin " +
         guess +
-        ". hakkinda bildin :))" +
+        ". hakkinda bildin :))   " +
+        "PUANIN " +
         (100 - (guess - 1) * 15)
     );
   } else if (x > y) {
