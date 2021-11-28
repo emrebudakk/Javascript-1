@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tasarım Kodlama</title>
+    <style>
+        body, #submitguess, .guessField{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            font-weight: 400;
+            font-stretch: extra-condensed;
+            font-size: 20px;
+        }
+        #submitguess {
+            background-color: lightblue;
+        }
+    </style>
+  </head>
+  <body>
+    <body>
+        <h1>Kucuk Ahmet Hangi Vagonda</h1>
+          
+        <p>Ahmet hangi vagonda. Bakalım tahmin edebilecek misin?</p>
+          
+        <div class="form">
+            <label for="guessField">Tahminde bulun: </label>
+            <input type = "text" id = "guessField" class = "guessField">
+            <input type = "submit" value = "Tahmin Gonder" 
+                   class = "guessSubmit" id = "submitguess">
+        </div>
+        <script src="./code.js"></script>
+  </body>
+</html>
