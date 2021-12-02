@@ -1,34 +1,79 @@
-// 0 - 100 arası çift sayılar (düzeltmek gerekiyor)
-// let nummer = 0;
-// while (let nummer < 100; sayac = nummer + 2) {
-//   let sayac += nummer;
-//   console.log(sayac);
-// }
+/*
+Array icindeki sayilarin matematiksel islemleri:
+1- karekokleri,
+2- kareleri,
+3- tum sayilarin toplami,
+4- ortalamasi,
+5- en büyük sayi
+6- en kücük sayi
+*/
 
-//hem 3 hem 5 bölünebilen sayılar
-// let toplam = 0;
-// for (let nummer = 1; nummer < 100; nummer++) {
-//   if (nummer % 3 == 0 && nummer % 5 == 0) {
-//     toplam += nummer;
-//     console.log(nummer);
-//   }
-// }
+let sayi1 = parseInt(
+  prompt("Lütfen 1. sayiyi girin!")
+); /* "parselInt" ile prompt yoluyla kullanicidan aldigim stringi sayiya cevirdim*/
+let sayi2 = parseInt(prompt("Lütfen 2. sayiyi girin!"));
+let sayi3 = parseInt(prompt("Lütfen 3. sayiyi girin!"));
+let sayi4 = parseInt(prompt("Lütfen 4. sayiyi girin!"));
+let sayi5 = parseInt(prompt("Lütfen 5. sayiyi girin!"));
+let sayi6 = parseInt(prompt("Lütfen 6. sayiyi girin!"));
+let sayi7 = parseInt(prompt("Lütfen 7. sayiyi girin!"));
+let sayi8 = parseInt(prompt("Lütfen 8. sayiyi girin!"));
+let sayi9 = parseInt(prompt("Lütfen 9. sayiyi girin!"));
+let sayi10 = parseInt(prompt("Lütfen 10. sayiyi girin!"));
 
-//Array kullanarak ilk son ve ortadaki sayıları yazdırma
-// const sayilar = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// console.log(sayilar[0]);
-// console.log(sayilar[4]);
-// console.log(sayilar[8]);
+let numbers = [
+  sayi1,
+  sayi2,
+  sayi3,
+  sayi4,
+  sayi5,
+  sayi6,
+  sayi7,
+  sayi8,
+  sayi9,
+  sayi10,
+];
 
-//farkli bir yontem
-const sayilar = [11, 22, 33, 14, 15, 56, 67, 98, 9];
-console.log("Array (sayilar) size: ", sayilar.length);
+// let numbers = [5, 15, 24, 32, 48, 50, 66, 74, 85, 93];
 
-const first_number = 0;
-const length = sayilar.length;
+// eleman sayisi
+console.log(numbers.length);
 
-console.log("first_number", sayilar[first_number]);
-console.log("middle one: ", sayilar[middleIndex]);
-console.log("last number", sayilar[length - 1]);
+// elemanlar
+console.log(numbers);
 
-let mayStringArray = ["hello", "world", "Merhaba", "Hoi"];
+// 1-karekokunu bulma
+let karekok = numbers.map((x) => Math.sqrt(x));
+console.log(
+  "Dizideki sayilarin karekoku => " + numbers.map((x) => Math.sqrt(x))
+);
+
+// 2-karesini hesaplama
+let kare = numbers.map((x) => Math.pow(x, 2));
+console.log(
+  "Dizideki sayilarin kareleri => " + numbers.map((x) => Math.pow(x, 2))
+);
+
+// 3-tum sayilarin toplami
+let total = 0;
+for (let sayac = 0; sayac < numbers.length; sayac++) {
+  let number = numbers[sayac];
+  total = total + number;
+}
+console.log(total);
+
+//4-sayilarin ortalamasi
+console.log(total / numbers.length);
+
+//5-en kucuk sayi
+// console.log(Math.min(numbers));
+let min = numbers[0];
+let max = numbers[0];
+for (let sayac = 0; sayac < numbers.length; sayac++) {
+  if (min > numbers[sayac]) min = numbers[sayac]; //Aynı şekilde min'den küçük bir eleman var ise yeni min o olacak.
+  if (max < numbers[sayac]) max = numbers[sayac]; // Eğer dizinin herhangi bir elemanı max'tan büyükse yeni max o olacak.
+}
+console.log("Dizideki en küçük eleman " + min);
+
+//6- en buyuk sayi
+console.log("Dizideki en büyük elemenan " + max);

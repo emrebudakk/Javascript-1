@@ -4,9 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>for ve while döngüleri</title>
+    <title>Array - Matematik islemleri</title>
+    <style>
+      body,
+      button {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        font-stretch: extra-condensed;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      button {
+        background-color: lightblue;
+        margin-top: 30px;
+      }
+    </style>
   </head>
   <body>
+    <button onclick="getElementById('sonuc1').innerHTML = karekok" value="a">
+      Dizideki sayilarin kareköklerini Hesapla
+    </button>
+    <p><b id="sonuc1"></b></p>
+
+    <button onclick="getElementById('sonuc2').innerHTML = kare" value="a">
+      Dizideki sayilarin karelerini Hesapla
+    </button>
+    <p><b id="sonuc2"></b></p>
+
+    <button onclick="getElementById('sonuc3').innerHTML = total" value="a">
+      Dizideki tum sayilarin toplami
+    </button>
+    <p><b id="sonuc3"></b></p>
+
+    <button
+      onclick="getElementById('sonuc4').innerHTML = total/numbers.length"
+      value="a"
+    >
+      Dizideki tum sayilarin ortalamasi
+    </button>
+    <p><b id="sonuc4"></b></p>
+
+    <button onclick="getElementById('sonuc5').innerHTML = min" value="a">
+      en kücük sayi
+    </button>
+    <p><b id="sonuc5"></b></p>
+
+    <button onclick="getElementById('sonuc6').innerHTML = max" value="a">
+      en büyük sayi
+    </button>
+    <p><b id="sonuc6"></b></p>
     <script src="./code.js"></script>
   </body>
 </html>
