@@ -1,0 +1,28 @@
+/*içiçe en fazla 3 tane tag kullanılmalı*/
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    color: grey;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+    &:hover {
+      /*ikinci özellik vermek için süslü parantezin içine ekliyoruz*/
+      color: red;
+    }
+  }
+
+  div {
+    background-color: green;
+  }
+}

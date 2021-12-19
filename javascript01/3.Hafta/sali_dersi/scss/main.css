@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/********************
+VARIABLES
+*********************/
+/********************
+COLORS
+*********************/
+/********************
+FONTSIZE
+*********************/
+.btn {
+  color: white;
+  background-color: blue;
+  padding: 18px 44px;
+  border: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #3333ff;
+  /*butonun üzerine gelindiğinde %10 dönüştürdü*/
+}
+
+/*içiçe en fazla 3 tane tag kullanılmalı*/
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  color: grey;
+}
+
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  /*ikinci özellik vermek için süslü parantezin içine ekliyoruz*/
+  color: red;
+}
+
+nav div {
+  background-color: green;
+}
+
+/**degiskenler*/
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+/*# sourceMappingURL=main.css.map */
