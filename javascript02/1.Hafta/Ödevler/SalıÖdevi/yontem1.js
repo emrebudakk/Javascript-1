@@ -24,7 +24,13 @@ let result1 = [];
 let result2 = [];
 function footCalculate() {
   for (let index = 0; index <= animallist.length; index++) {
-    if (!(animallist[index] === "domuz" || animallist[index] === "tavuk")) {
+    if (
+      !(
+        animallist[index] === "domuz" ||
+        animallist[index] === "tavuk" ||
+        animallist[index] === " "
+      )
+    ) {
       result1.push(animallist[index]);
     } else if (animallist[index] === "tavuk") {
       result2.push(animallist[index]);
