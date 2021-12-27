@@ -47,11 +47,77 @@
 //   .filter((person) => person.includes("Sekeroglu"));
 // console.log(result);
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
-const result = numbers.reduce(
-  (a, b) => a * b
-); /* çalışma şekli => a = 1, b = 2, sonra a*b= 2, a = 2, b = 3 sonra a*b=6 ..... */
+// const result = numbers.reduce(
+//   (a, b) => a * b
+// ); /* çalışma şekli => a = 1, b = 2, sonra a*b= 2, a = 2, b = 3 sonra a*b=6 ..... */
 
-console.log(result);
-console.log(numbers);
+// console.log(result);
+// console.log(numbers);
+/* Error Function*/
+// function sum(pFirstNumber, pSecondNumber) {
+//   return pFirstNumber + pSecondNumber;
+// }
+
+/* function yerine error function la yaparsak*/
+// const sum = (pFirstNumber, pSecondNumber) => pFirstNumber + pSecondNumber;
+
+/* eğer birden fazla satır varsa*/
+// function hypo(pFirstEdge, pSecondEdge) {
+//   const sumSqr = pFirstEdge ** 2 + pSecondEdge ** 2;
+//   const result = Math.sqrt(sumSqr);
+//   return result;
+// }
+
+/*Error Function ile yazılmış hali*/
+// const assert(hypo(3,4)==5)
+
+// console.assert(21, 3 + "ooo güzel çalışıyor");
+
+/* setIntervial(fn.sayi)
+fn çalıştırılacak fonksiyon
+syai milisaniye cinsinden fonksiyonun hangi zaman aralığında çağrılacağını belirtir
+*/
+// function saniyedeBirCagrilacakFonksiyon() {
+//   console.log("her bir saniyede bu fonksiyonu göster");
+// }
+
+// setInterval(saniyedeBirCagrilacakFonksiyon, 1000); /*1000ms = 1 sn*/
+/*Error Function ile yazılmış hali*/
+// setInterval(() => {
+//   console.log("her bir saniyede bu fonksiyonu göster");
+// }, 1000);
+
+// const names = ["mustafa", "Hasan", "Ferhat"];
+
+// const filteredArr = names.filter((name) => name.length > 5);
+
+// console.log("filtered Arr = " + filteredArr);
+
+const fruitList = [
+  "Elma",
+  "Üzüm",
+  "Avakado",
+  "İncir",
+  "Mandalina",
+  "iğde",
+  "kiwi",
+  "Kiraz",
+  "Portakal",
+  "Mango",
+  "muz",
+  "Hurma",
+];
+
+/*içinde i harfi geçen ve uzunluğu 4 ten büyük olan meyveler*/
+const sevdigimMeyveler = fruitList
+  .filter((fruit) => fruit.includes("i"))
+  /*içinde "i" geçen elemanları buldum*/
+  .filter((fruit) => fruit.length > 4)
+  /*içinde "i" geçen 4 harften büyük olan elemanları buldum*/
+  .map((fruit) => fruit[0])
+  /*içinde "i" geçen 4 harften büyük olan elemanların 1. elemanlarını buldum*/
+  .map((letter) => letter.toUpperCase());
+/*içinde "i" geçen 4 harften büyük olan elemanların 1. elemanlarını büyük harf yaptım*/
+console.log("en sevdiğim meyveler" + sevdigimMeyveler);
