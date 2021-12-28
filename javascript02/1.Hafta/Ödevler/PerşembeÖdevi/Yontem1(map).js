@@ -23,36 +23,51 @@ const autoProduct = [
   "Jant",
   "Direksiyon16",
 ];
+
 const d = new Date();
 const dates = d.toUTCString();
+function bigConvert() {
+  const newAutoProduct = autoProduct
+    .map((product) => product.toUpperCase())
+    .map((delNumber) => delNumber.replace(/[0-9]/g, ""))
+    .map((product) => product.split("").reverse().join(""))
+    .map((product) => "KEREMAG_" + product)
+    .map((product) => product + "(" + dates + ")");
+  return newAutoProduct;
+}
+
+console.log("Stringler büyük harfe çevrildi => " + bigConvert());
+
+// const d = new Date();
+// const dates = d.toUTCString();
 /*
 2. Adım: Stringleri büyük harfe çevirme
 */
 
-const bigConvert = autoProduct.map((product) => product.toUpperCase());
-console.log("Stringler büyük harfe çevrildi => " + bigConvert);
+// const bigConvert = autoProduct.map((product) => product.toUpperCase());
+// console.log("Stringler büyük harfe çevrildi => " + bigConvert);
 
-/*
-3. Adım: Parca isimlerinden sayiları cikartma
-*/
-const destroyingNumbers = bigConvert.map((product) =>
-  product.replace(/[0-9]/g, "")
-);
-console.log("Parca isimlerinden sayilar çıkarıldı => " + destroyingNumbers);
-/*
-4. Adım: Parca isimlerini tersine cevrirme
-*/
-const reversalText = destroyingNumbers.map((product) =>
-  product.split("").reverse().join("")
-);
-console.log("Parca isimlerini tersine çevrildi => " + reversalText);
-/*
-5. Adım: Her parcanin basina KEREMAG_ ekleme
-*/
-const addText = reversalText.map((product) => "KEREMAG_" + product);
-console.log("Her parcanin basina KEREMAG_ eklendi => " + addText);
-/*
-6. Adım: Her parcanin sonuna date ekleme
-*/
-const addDate = addText.map((product) => product + "(" + dates + ")");
-console.log("Her parcanin sonuna Date eklendi => " + addDate);
+// /*
+// 3. Adım: Parca isimlerinden sayiları cikartma
+// */
+// const destroyingNumbers = bigConvert.map((product) =>
+//   product.replace(/[0-9]/g, "")
+// );
+// console.log("Parca isimlerinden sayilar çıkarıldı => " + destroyingNumbers);
+// /*
+// 4. Adım: Parca isimlerini tersine cevrirme
+// */
+// const reversalText = destroyingNumbers.map((product) =>
+//   product.split("").reverse().join("")
+// );
+// console.log("Parca isimlerini tersine çevrildi => " + reversalText);
+// /*
+// 5. Adım: Her parcanin basina KEREMAG_ ekleme
+// */
+// const addText = reversalText.map((product) => "KEREMAG_" + product);
+// console.log("Her parcanin basina KEREMAG_ eklendi => " + addText);
+// /*
+// 6. Adım: Her parcanin sonuna date ekleme
+// */
+// const addDate = addText.map((product) => product + "(" + dates + ")");
+// console.log("Her parcanin sonuna Date eklendi => " + addDate);
