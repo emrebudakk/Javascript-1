@@ -43,19 +43,19 @@ const maas = incomeStatementNumber.find(function (elem) {
 });
 
 /*4. Adım:*/
-const incomeStatementDelMaas = incomeStatementNumber.splice(1);
-const sum = incomeStatementDelMaas.reduce(function (total, amount) {
-  return total + amount;
-});
-
+const incomeStatementDelMaas = incomeStatementNumber
+  .splice(1)
+  .reduce(function (total, amount) {
+    return total + amount;
+  });
 /*5. ve 6. Adım:*/
 function remainingAmount() {
   return (
     "Fikret Bey'in Elinde Kalan Parası => " +
-    (maas - sum) +
+    (maas - incomeStatementDelMaas) +
     "\n" +
     ("Fikret Bey'e Şirketin yaptığı yardım miktarı => " +
-      ((maas - sum) * 1) / 5)
+      ((maas - incomeStatementDelMaas) * 1) / 5)
   );
 }
 console.log(remainingAmount());
