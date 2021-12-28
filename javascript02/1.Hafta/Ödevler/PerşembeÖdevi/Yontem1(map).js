@@ -36,7 +36,7 @@ function bigConvert() {
   return newAutoProduct;
 }
 
-console.log("Stringler büyük harfe çevrildi => " + bigConvert());
+console.log("Yedek Parcaci Keremin yeni listesi => " + bigConvert());
 
 // const d = new Date();
 // const dates = d.toUTCString();
