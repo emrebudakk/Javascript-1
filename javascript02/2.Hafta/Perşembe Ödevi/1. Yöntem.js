@@ -6,7 +6,6 @@
    6. Adım: Elinde kalan miktarı bulan fonksiyonu yazmak
 */
 
-/*1. Adım:*/
 const incomeStatement = [
   15000,
   2000,

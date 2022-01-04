@@ -11,14 +11,8 @@
 8. Adım: Sonuç oluşturulan fonksiyonlar kullanılarak Console a yazdırılacak
 */
 
-/*
-1. Adım:
-*/
 const personBirthYear = prompt("Please!! Enter your year of birth!!");
 
-/*
-2. Adım:
-*/
 const animalHoroscopeList = [
   "Monkey",
   "Cock",
@@ -34,18 +28,9 @@ const animalHoroscopeList = [
   "Sheep",
 ];
 
-/*
-3. Adım:
-*/
 const chineseElements = ["Metal", "Water", "Wood", "Fire", "Earth"];
 
-/*
-4. Adım:
-*/
 function pChineseHoroscope() {
-  /*
-5. Adım:
-*/
   const yearLoop = personBirthYear % 12;
   if (yearLoop === 0) {
     horoscope = animalHoroscopeList[0];
@@ -74,13 +59,8 @@ function pChineseHoroscope() {
   }
   return horoscope;
 }
-/*
-6. Adım:
-*/
+
 function pChineseElement() {
-  /*
-7. Adım:
-*/
   const yearLoop = personBirthYear % 10;
   if (yearLoop === 0 || yearLoop === 1) {
     Elements = chineseElements[0];
@@ -95,10 +75,6 @@ function pChineseElement() {
   }
   return Elements;
 }
-
-/*
-8. Adım:
-*/
 console.log(
   "sexagenary" +
     "(" +
