@@ -31,23 +31,18 @@ const incomeStatement = [
   7,
 ];
 
-/*2. Adım:*/
 const incomeStatementNumber = incomeStatement.filter(function (number) {
   return number > 0;
 });
 
-/*3. Adım:*/
 const maas = incomeStatementNumber.find(function (elem) {
   return elem > 0;
 });
-
-/*4. Adım:*/
 const incomeStatementDelMaas = incomeStatementNumber
   .splice(1)
   .reduce(function (total, amount) {
     return total + amount;
   });
-/*5. ve 6. Adım:*/
 function remainingAmount() {
   return (
     "Fikret Bey'in Elinde Kalan Parası => " +

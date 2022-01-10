@@ -12,7 +12,7 @@ Array.prototype.random = function (n) {
   for (let i = 0; i < n; i++) {
     let index = Math.floor(Math.random() * this.length); // Kendime Not: Math.floor yerine ~~ işaretleri de kullanılabilir
     newList.push(this[index]);
-    this.splice(index, 1);
+    this.splice(index, 1); // index ile groupList ve perosnalList ten alinan 1 elemanı groupList ve perosnalList ten siliyor
   }
   return newList;
 };
@@ -39,3 +39,14 @@ const personalList = [
 for (let i = 0; i < 5; i++) {
   console.log(groupList.random(1) + " " + personalList.random(1));
 }
+
+/*2. Yöntem(Code Review de yapılan)
+*Analiz
+1. Start
+2. Rastgele bir grup ismi seçmem lazım => Math.floor(Math.random()) yöntemi ile
+3. Rastgele bir ismi seçmem lazım
+4. Bu iki ismi birleştirmem lazım =>
+5. Yukarıdaki işlemler x defa tekrarlanmalı
+6. Sonucu ekrana yazdırmalıyım
+7. Finished
+*/
