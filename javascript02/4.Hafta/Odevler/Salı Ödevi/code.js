@@ -109,8 +109,9 @@ const fatherFamilieList = families
   .filter((salary) => salary.salary > 5000)
   .map((fatherName) => fatherName.firstname + " " + fatherName.lastname)
   .sort();
+
 console.log(
-  "Maasi 5000'in üzerinde olan aile babaları => " + fatherFamilieList
+  `Maasi 5000'in üzerinde olan aile babaları => ${fatherFamilieList}`
 );
 
 /*  ************************************************
@@ -127,12 +128,9 @@ const boysNumberNameList = families
   })
   .flat(1)
   .sort();
+
 console.log(
-  "Erkek cocuklarin isim sirali listesi => " +
-    boysNumberNameList +
-    "\n" +
-    "Erkek cocuklarin sayisi => " +
-    boysNumberNameList.length
+  `Erkek cocuklarin isim sirali listesi => ${boysNumberNameList}\nErkek cocuklarin sayisi => ${boysNumberNameList.length}`
 );
 
 /*  ************************************************
@@ -149,12 +147,9 @@ const girlsNumberNameList = families
   })
   .flat(1)
   .sort();
+
 console.log(
-  "Kiz cocuklarin isim sirali listesi => " +
-    girlsNumberNameList +
-    "\n" +
-    "Kiz cocuklarin sayisi => " +
-    girlsNumberNameList.length
+  `Kiz cocuklarin isim sirali listesi => ${girlsNumberNameList}\nKiz cocuklarin sayisi => ${girlsNumberNameList.length}`
 );
 
 /*  ************************************************
@@ -173,12 +168,9 @@ const ageEightUnderNameList = families
   .flat(1)
   .sort()
   .map((delNumber) => delNumber.replace(/[0-9]/g, ""));
+
 console.log(
-  "Yasi 8'den küçük cocuklarin yaş sirali listesi => " +
-    ageEightUnderNameList +
-    "\n" +
-    "Yasi 8'den küçük cocuklarin sayisi => " +
-    ageEightUnderNameList.length
+  `Yasi 8'den küçük cocuklarin yaş sirali listesi => ${ageEightUnderNameList}\nYasi 8'den küçük cocuklarin sayisi => ${ageEightUnderNameList.length}`
 );
 
 /*  ************************************************
@@ -192,6 +184,7 @@ const ageEightOverMotherList = families
   .filter((a) => a.childrens.filter((b) => b.age >= 8).length > 0) // kendime not: length > 0 kullanarak filterden gelen veri olup olmadığını doğruladım
   .map((ages) => ages.partner)
   .sort();
+
 console.log(
-  "8 Yasindan Büyük Cocuklarin Anneleri => " + ageEightOverMotherList
+  `8 Yasindan Büyük Cocuklarin Anneleri => ${ageEightOverMotherList}`
 );
