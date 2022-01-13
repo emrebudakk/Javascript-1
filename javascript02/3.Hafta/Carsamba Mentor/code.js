@@ -318,3 +318,18 @@ const highAgePersonList = personList
 
 console.log(highAgePersonList); //[ 'Ross' ]
 */
+/*
+  * javascript ile ul tagını dinamik olara yazdırma
+ 
+const personalList = ["Mehmet", "mustafa", "ayse", "ismail"];
+
+function createPersonelList() {
+  return personalList
+    .map((person) => {
+      return `<li>${person}</li>`;
+    })
+    .join("");
+}
+
+console.log(createPersonelList());
+*/
