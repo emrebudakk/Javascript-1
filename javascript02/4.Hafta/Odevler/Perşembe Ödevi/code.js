@@ -183,6 +183,7 @@ console.log(
     * AB ülkelerinden gelen balıklar "filter" ve "includes" ile (europaLand) arrayına bakılarak bulunacak
     * Sonra bu özelliğe sahip elemanların fishType leri "map" ile listelenecek.
 */
+
 const europaLand = [
   "Albania",
   "Andorra",
