@@ -294,7 +294,7 @@ console.log(`8) En uzun sureli durabilen balığın ülkesi => ${hardyFish}`);
 */
 const winterSpringPriceAverage =
   fishFarm
-    .filter((seasons) => seasons.season === "Winter" || "Spring")
+    .filter((seasons) => seasons.season === "Winter" || "Autumn")
     .map((total) => total.price)
     .reduce((total, pozitive) => total + pozitive) / fishFarm.length;
 

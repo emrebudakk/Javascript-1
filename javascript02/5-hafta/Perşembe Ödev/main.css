@@ -1,0 +1,57 @@
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#kutup,
+#kutu1,
+#kutu2,
+#kutu3 {
+  border: 3px rgb(104, 104, 104) solid;
+  text-align: center;
+  font-size: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  margin: 1px;
+  color: white;
+  margin: 0.4px;
+  line-height: 100px;
+  width: 200px;
+  height: 90px;
+}
+#kutup {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 90px;
+  height: 25px;
+  margin-bottom: 0.5px;
+}
+
+#kutu1 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 0.5px;
+}
+#kutu2 {
+  margin-bottom: 0.5px;
+}
+#kutu3 {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+button {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 0px;
+  color: rgb(17, 44, 196);
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 110px;
+  background-color: transparent;
+  bottom: 25px;
+}

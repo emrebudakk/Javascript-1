@@ -111,7 +111,7 @@ const fatherFamilieList = families
   .sort();
 
 console.log(
-  `Maasi 5000'in üzerinde olan aile babaları => ${fatherFamilieList}`
+  `1) Maasi 5000'in üzerinde olan aile babaları => ${fatherFamilieList}`
 );
 
 /*  ************************************************
@@ -130,7 +130,7 @@ const boysNumberNameList = families
   .sort();
 
 console.log(
-  `Erkek cocuklarin isim sirali listesi => ${boysNumberNameList}\nErkek cocuklarin sayisi => ${boysNumberNameList.length}`
+  `2) Erkek cocuklarin isim sirali listesi => ${boysNumberNameList}\nErkek cocuklarin sayisi => ${boysNumberNameList.length}`
 );
 
 /*  ************************************************
@@ -149,7 +149,7 @@ const girlsNumberNameList = families
   .sort();
 
 console.log(
-  `Kiz cocuklarin isim sirali listesi => ${girlsNumberNameList}\nKiz cocuklarin sayisi => ${girlsNumberNameList.length}`
+  `3) Kiz cocuklarin isim sirali listesi => ${girlsNumberNameList}\nKiz cocuklarin sayisi => ${girlsNumberNameList.length}`
 );
 
 /*  ************************************************
@@ -170,7 +170,7 @@ const ageEightUnderNameList = families
   .map((delNumber) => delNumber.replace(/[0-9]/g, ""));
 
 console.log(
-  `Yasi 8'den küçük cocuklarin yaş sirali listesi => ${ageEightUnderNameList}\nYasi 8'den küçük cocuklarin sayisi => ${ageEightUnderNameList.length}`
+  `4) Yasi 8'den küçük cocuklarin yaş sirali listesi => ${ageEightUnderNameList}\nYasi 8'den küçük cocuklarin sayisi => ${ageEightUnderNameList.length}`
 );
 
 /*  ************************************************
@@ -181,10 +181,23 @@ console.log(
       * sort() ile isimler sıralacak
 */
 const ageEightOverMotherList = families
-  .filter((a) => a.childrens.filter((b) => b.age >= 8).length > 0) // kendime not: length > 0 kullanarak filterden gelen veri olup olmadığını doğruladım
+  .filter((a) => a.childrens.filter((b) => b.age > 8).length > 0) // kendime not: length > 0 kullanarak filterden gelen veri olup olmadığını doğruladım.bunun yerine some veya find yöntemi de kullanılabilir(yani en azından 1 çocuğun 8 den büyük olup olmadığını true ya da false olarak geri dördürüyorlar)
+  // .filter((a) => a.childrens.find((b) => b.age > 8))
+  // .filter((a) => a.childrens.some((b) => b.age > 8))
   .map((ages) => ages.partner)
   .sort();
-
 console.log(
-  `8 Yasindan Büyük Cocuklarin Anneleri => ${ageEightOverMotherList}`
+  `5) 8 Yasindan Büyük Cocuklarin Anneleri => ${ageEightOverMotherList}`
 );
+
+// 5. soruyu Fonksiyon olarak yazacak olursak
+const LIMIT_AGE = 8;
+function getMothersNames() {
+  const ageEightOverMotherList = families
+    .filter((a) => a.childrens.some((b) => b.age > LIMIT_AGE))
+    .map((ages) => ages.partner)
+    .sort();
+  return ageEightOverMotherList;
+}
+
+console.log(`5) 8 Yasindan Büyük Cocuklarin Anneleri => ${getMothersNames()}`);

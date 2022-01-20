@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Test</title>
+  </head>
+  <body>
+    <p id="Absatz"></p>
+    <button id="Eingabe">Los!</button>
+
+    <script>
+      var elem = document.getElementById("Eingabe");
+      elem.addEventListener("click", erzeugeZeitStempel);
+
+      function erzeugeZeitStempel() {
+        var Zeitstempeltext = document.createTextNode(document.lastModified);
+        var TextZuvor = document.createTextNode("Datum des letzten Updates: ");
+        document.getElementById("Absatz").appendChild(TextZuvor);
+        document.getElementById("Absatz").appendChild(Zeitstempeltext);
+      }
+    </script>
+  </body>
+</html>
