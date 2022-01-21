@@ -11,6 +11,8 @@ let counter = 0;
 let clickOne = function () {
   kutup.style.background = "red";
   kutu3.style.background = "red";
+  kutu2.style.background = "";
+  kutu1.style.background = "";
   kutu3.textContent = `%33`;
 };
 
@@ -18,6 +20,7 @@ let clickTwo = function () {
   kutup.style.background = "Orange";
   kutu3.style.background = "Orange";
   kutu2.style.background = "Orange";
+  kutu1.style.background = "";
   kutu2.textContent = `%66`;
   kutu3.textContent = ``;
 };
@@ -27,6 +30,14 @@ let clickThree = function () {
   kutu3.style.background = "green";
   kutu2.style.background = "green";
   kutu1.style.background = "green";
+  kutu1.textContent = `%100`;
+  kutu2.textContent = ``;
+};
+let clickFour = function () {
+  kutup.style.background = "";
+  kutu3.style.background = "";
+  kutu2.style.background = "";
+  kutu1.style.background = "";
   kutu1.textContent = `%100`;
   kutu2.textContent = ``;
 };
@@ -44,13 +55,14 @@ let chargeFunction = function () {
 };
 
 let dischargeFunction = function () {
-  if (counter == 3) {
-    clickThree();
-    counter--;
-  } else if (counter == 2) {
+  if (counter == 2) {
     clickTwo();
     counter--;
-  } else {
+  } else if (counter == 1) {
     clickOne();
+    counter--;
+  } else if (counter == 0) {
+    clickFour();
+    counter--;
   }
 };
