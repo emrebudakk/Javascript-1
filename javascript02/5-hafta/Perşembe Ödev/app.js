@@ -61,8 +61,7 @@ let dischargeFunction = function () {
   } else if (counter == 1) {
     clickOne();
     counter--;
-  } else if (counter == 0) {
+  } else {
     clickFour();
-    counter--;
   }
 };
