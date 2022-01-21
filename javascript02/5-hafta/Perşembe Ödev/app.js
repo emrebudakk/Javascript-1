@@ -14,6 +14,8 @@ let clickOne = function () {
   kutu2.style.background = "";
   kutu1.style.background = "";
   kutu3.textContent = `%33`;
+  kutu2.textContent = ``;
+  kutu1.textContent = ``;
 };
 
 let clickTwo = function () {
@@ -23,6 +25,7 @@ let clickTwo = function () {
   kutu1.style.background = "";
   kutu2.textContent = `%66`;
   kutu3.textContent = ``;
+  kutu1.textContent = ``;
 };
 
 let clickThree = function () {
@@ -32,14 +35,16 @@ let clickThree = function () {
   kutu1.style.background = "green";
   kutu1.textContent = `%100`;
   kutu2.textContent = ``;
+  kutu3.textContent = ``;
 };
 let clickFour = function () {
   kutup.style.background = "";
   kutu3.style.background = "";
   kutu2.style.background = "";
   kutu1.style.background = "";
-  kutu1.textContent = `%100`;
+  kutu1.textContent = ``;
   kutu2.textContent = ``;
+  kutu3.textContent = `%0`;
 };
 
 let chargeFunction = function () {
