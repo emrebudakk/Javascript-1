@@ -1,3 +1,12 @@
+/*
+pilin 4 tane state i var
+-boş
+-33% dolu(kırmızı)
+-66% dolu(turuncu)
+100% dolu(yeşil)
+
+pilin bu 4 durumunu 4 sayı ile tanımlayabiliriz.
+*/
 const btn1 = document.querySelector("#btn1");
 const btn2 = document.querySelector("#btn2");
 const btn3 = document.querySelector("#btn3");
@@ -37,7 +46,7 @@ let clickThree = function () {
   kutu2.textContent = ``;
   kutu3.textContent = ``;
 };
-let clickFour = function () {
+function clickFour() {
   kutup.style.background = "";
   kutu3.style.background = "";
   kutu2.style.background = "";
@@ -45,7 +54,7 @@ let clickFour = function () {
   kutu1.textContent = ``;
   kutu2.textContent = ``;
   kutu3.textContent = `%0`;
-};
+}
 
 let chargeFunction = function () {
   if (counter == 0) {

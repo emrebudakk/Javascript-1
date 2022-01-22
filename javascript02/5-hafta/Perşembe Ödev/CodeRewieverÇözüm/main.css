@@ -1,0 +1,48 @@
+main {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  flex-direction: column;
+}
+
+#battery-container {
+  border: 2px solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+#battery-container div {
+  border: 1px solid black;
+  flex-grow: 1;
+}
+
+/* solution 1.5*/
+
+.battery-level-0 div {
+  background-color: white;
+}
+
+.battery-level-1 div {
+  background-color: white;
+}
+.battery-level-1 div {
+  background-color: red;
+}
+
+.battery-level-2 div {
+  background-color: white;
+}
+.battery-level-2 div {
+  background-color: orange;
+}
+.battery-level-2 div {
+  background-color: orange;
+}
+
+.battery-level-3 div {
+  background-color: green;
+}
