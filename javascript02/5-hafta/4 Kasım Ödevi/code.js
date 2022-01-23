@@ -1,8 +1,6 @@
-const classDataA = [
-  {
+const classDataA = [{
     name: "Marco",
-    dersler: [
-      {
+    dersler: [{
         dersAdi: "Matematik",
         not: 80,
       },
@@ -22,8 +20,7 @@ const classDataA = [
   },
   {
     name: "Alessandra",
-    dersler: [
-      {
+    dersler: [{
         dersAdi: "Matematik",
         not: 80,
       },
@@ -35,8 +32,7 @@ const classDataA = [
   },
   {
     name: "Isabella",
-    dersler: [
-      {
+    dersler: [{
         dersAdi: "Matematik",
         not: 80,
       },
@@ -56,8 +52,7 @@ const classDataA = [
   },
   {
     name: "Elisa",
-    dersler: [
-      {
+    dersler: [{
         dersAdi: "Matematik",
         not: 80,
       },
@@ -77,8 +72,7 @@ const classDataA = [
   },
   {
     name: "Rafaele",
-    dersler: [
-      {
+    dersler: [{
         dersAdi: "Matematik",
         not: 80,
       },
@@ -94,8 +88,7 @@ const classDataA = [
   },
   {
     name: "Hans",
-    dersler: [
-      {
+    dersler: [{
         dersAdi: "Matematik",
         not: 80,
       },
@@ -115,8 +108,7 @@ const classDataA = [
   },
   {
     name: "Jack",
-    dersler: [
-      {
+    dersler: [{
         dersAdi: "Matematik",
         not: 80,
       },
@@ -136,8 +128,7 @@ const classDataA = [
   },
   {
     name: "Vincent",
-    dersler: [
-      {
+    dersler: [{
         dersAdi: "Matematik",
         not: 80,
       },
@@ -173,8 +164,8 @@ function getNoteAverage() {
   console.log(DERS_AD);
   const noteAverage =
     DERS_AD.filter((name) => name.dersAdi.includes("Matematik"))
-      .map((note) => note.not)
-      .reduce((total, pozitive) => total + pozitive) / classDataA.length;
+    .map((note) => note.not)
+    .reduce((total, pozitive) => total + pozitive) / classDataA.length;
   return noteAverage;
 }
 console.log(getNoteAverage());
